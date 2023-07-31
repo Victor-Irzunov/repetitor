@@ -1,0 +1,20 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/vitechsi/minsk"
+PassengerBaseURI "/"
+PassengerNodejs "/home/vitechsi/nodevenv/minsk/16/bin/node"
+PassengerAppType node
+PassengerStartupFile server.js
+PassengerAppLogFile "/home/vitechsi/logi/logs.log"
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+SetEnv DB_HOST localhost
+SetEnv DB_NAME vitechsi_repetitor
+SetEnv DB_PASSWORD Qaz123-321
+SetEnv DB_PORT 3306
+SetEnv DB_USER vitechsi_root
+SetEnv NODE_ENV production
+SetEnv SECRET_KEY random_secret_key13
+SetEnv REACT_APP_API_URL https://vi-tech.site/
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END

@@ -2,26 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+[type='submit']{
+	background-color: #1677ff;
+ }
+ /* [type='button']{
+	background-color: #1677ff;
+ } */
+
+ :where(.css-dev-only-do-not-override-1m62vyb).ant-btn-primary{
+	background-color: #1677ff;
+ }
+ :where(.css-1m62vyb).ant-btn-primary{
+	background-color: #1677ff;
+ }
+
+ :where(.css-dev-only-do-not-override-1m62vyb).ant-btn.ant-btn-sm{
+	background-color: #1677ff !important;
+ }
+
+ .fon{
+	background-image: url('/images/fon.webp');
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}

@@ -33,6 +33,9 @@ const getUserInfoAdminHandler = require('./app/api/userGetInfo');
 const addPayAdminHandler = require('./app/api/paymentAddAdmin');
 const getPayUserHandler = require('./app/api/payGetUser');
 
+const addGroupAdminHandler = require('./app/api/groupAddTelegramAdmin');
+const getAllGroupAdminHandler = require('./app/api/groupGetAllTelegram');
+
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -64,6 +67,8 @@ app.prepare().then(() => {
 
   server.get('/api/pay/:id', getPayUserHandler.getPayDataUser);
 
+  server.get('/api/all/group', getAllGroupAdminHandler.allGroupTelegram);
+
 
   server.get('/', (req, res) => {
     return app.render(req, res, '/', req.query);
@@ -93,6 +98,8 @@ app.prepare().then(() => {
   server.post('/api/video', videoAddAdminHandler.videoAddAdmin);
 
   server.post('/api/pay', addPayAdminHandler.paymentAddAdmin);
+
+  server.post('/api/add/group', addGroupAdminHandler.addGroupTeleg);
 
   const PORT = process.env.PORT || 3000;
 

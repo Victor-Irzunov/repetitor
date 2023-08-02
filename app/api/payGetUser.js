@@ -5,7 +5,7 @@ const getPayDataUser = async (req, res) => {
 		try {
 			const { id } = req.params;
 			const infoPay = await Payment.findAll({ where: { userId: id } });
-			console.log("🚀 🚀 🚀  _ file: payGetUser.js:8 _ getPayDataUser _ infoPay:", infoPay)
+			// console.log("🚀 🚀 🚀  _ file: payGetUser.js:8 _ getPayDataUser _ infoPay:", infoPay)
 			if (infoPay) {
 				res.status(201).json({ message: 'Ваши оплаты получены!', data: infoPay });
 			} else {

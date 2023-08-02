@@ -4,7 +4,7 @@ import { Collapse } from "antd"
 import {
 	ScheduleOutlined, FormOutlined,
 	CalculatorOutlined, AuditOutlined, VideoCameraAddOutlined, 
-	VideoCameraOutlined, DollarOutlined, 
+	VideoCameraOutlined, DollarOutlined, SendOutlined, UsergroupAddOutlined,
 } from '@ant-design/icons'
 import FormRaspisanie from "@/components/formsAdmin/raspisanie/FormRaspisanie"
 import FormGetRaspisanie from "@/components/formsAdmin/raspisanie/FormGetRaspisanie"
@@ -13,6 +13,8 @@ import FormGetDz from "@/components/formsAdmin/dz/FormGetDz"
 import FormAddVideoAdmin from "@/components/formsAdmin/video/FormAddVideoAdmin"
 import FormGetVideoAdmin from "@/components/formsAdmin/video/FormGetVideoAdmin"
 import FormGetOneUserPayment from "@/components/formsAdmin/payment/FormGetOneUserPayment"
+import FormSendMessage from "@/components/formsAdmin/sendMessage/FormSendMessage"
+import FormAddGroupTelegram from "@/components/formsAdmin/formAddGroupTelegram/FormAddGroupTelegram"
 
 const items = [
 	{
@@ -65,7 +67,21 @@ const items4 = [
 		children: <FormGetOneUserPayment />,
 		extra: <DollarOutlined className='text-xl text-purple-600 ml-1' />,
 	},
-	
+];
+
+const items5 = [
+	{
+		key: '1',
+		label: 'Добавить группу с телеграмма',
+		children: <FormAddGroupTelegram/>,
+		extra: <UsergroupAddOutlined className='text-xl text-teal-600 ml-1' />,
+	},
+	{
+		key: '2',
+		label: 'Отправить напоминание о занятии',
+		children: <FormSendMessage />,
+		extra: <SendOutlined className='text-xl text-sky-700 ml-1' />,
+	},
 ];
 
 const AdminPage = () => {
@@ -84,7 +100,9 @@ const AdminPage = () => {
 					
 					<Collapse items={items3} accordion className="mb-6" />
 					
-					<Collapse items={items4} accordion className="mb-6"  />
+					<Collapse items={items4} accordion className="mb-6" />
+					
+					<Collapse items={items5} accordion className="mb-6"  />
 				</div>
 			</div>
 		</section>

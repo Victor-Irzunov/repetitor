@@ -16,12 +16,13 @@ const FormGetDz = () => {
 		try {
 			getAllAdminDzStudents(values.group)
 				.then(response => {
-					if (response.data) {
+					if (response.data.length) {
 						message.success('Домашние задания получены!')
 						setData(response.data)
 						form.resetFields()
 					} else {
-						message.warning('Нет такого ДЗ!')
+						message.warning('Нет ДЗ!')
+						form.resetFields()
 					}
 				})
 		} catch (error) {

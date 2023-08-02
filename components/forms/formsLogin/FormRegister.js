@@ -178,6 +178,15 @@ export const FormRegister = () => {
 				>
 					<Input.Password />
 				</Form.Item>
+
+				<Form.Item
+					label=""
+					name="uchenik"
+					valuePropName="checked"
+				>
+					<Checkbox >Ученик</Checkbox>
+				</Form.Item>
+
 				<Form.Item
 					label=""
 					name="isAdmin"
@@ -185,6 +194,7 @@ export const FormRegister = () => {
 				>
 					<Checkbox >Админстратор</Checkbox>
 				</Form.Item>
+
 				<Form.Item
 					wrapperCol={{
 						offset: 8,

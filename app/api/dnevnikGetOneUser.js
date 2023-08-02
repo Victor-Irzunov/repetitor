@@ -1,9 +1,7 @@
 const { Dnevnik } = require('../../models/models');
 
 const dnevnikGetOneUser = async (req, res) => {
-	console.log('--------------->')
-	console.log('--------------->')
-	console.log('--------------->')
+
 	if (req.method === 'GET') {
 		try {
 			const id = req.params.id;

@@ -79,12 +79,15 @@ const FormDowload = ({ data, dataDz }) => {
 				labelCol={{
 					span: 24,
 				}}
+				wrapperCol={{
+					span: 2,
+				}}
 			>
 				<Form.Item
 					name="num"
 					label="Номер домашнего задания"
 				>
-					<Input />
+					<Input style={{ width: '100px' }} />
 				</Form.Item>
 
 				<Form.Item

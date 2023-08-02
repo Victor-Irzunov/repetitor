@@ -3,7 +3,7 @@ import { Table } from 'antd';
 import moment from 'moment';
 
 export const DiaryTable = ({ dataDnevnik }) => {
-  console.log("🚀 🚀 🚀  _ file: DiaryTable.js:6 _ DiaryTable _ dataDnevnik:", dataDnevnik)
+  // console.log("🚀 🚀 🚀  _ file: DiaryTable.js:6 _ DiaryTable _ dataDnevnik:", dataDnevnik)
   // Преобразовываем массив данных в массив объектов для dataSource
   const dataSource = dataDnevnik.map((item) => ({
     key: item.id,

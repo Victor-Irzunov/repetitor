@@ -72,3 +72,11 @@ export const getOneUserAdmin = async (name) => {
 	return data
 }
 
+export const addGroupTelegram = async (obj) => {
+	const { data } = await $authHost.post('/api/add/group', obj)
+	return data
+}
+export const getAllGroupTelegram = async () => {
+	const { data } = await $authHost.get('/api/all/group')
+	return data
+}

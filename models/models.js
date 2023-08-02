@@ -164,6 +164,26 @@ const Video = sequelize.define('video', {
   }
 })
 
+const Group_telegram = sequelize.define('group_telegrams', {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  group: {
+    type: DataTypes.STRING,
+  },
+  token: {
+    type: DataTypes.STRING,
+  },
+  chat_id: {
+    type: DataTypes.STRING,
+  },
+  primechanie: {
+    type: DataTypes.TEXT('long'),
+  }
+})
+
 User.hasMany(StudentDz)
 StudentDz.belongsTo(User)
 
@@ -184,5 +204,6 @@ module.exports = {
   Payment,
   Raspisanie,
   Dnevnik,
-  Video
+  Video,
+  Group_telegram
 }
